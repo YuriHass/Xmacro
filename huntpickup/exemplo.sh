@@ -1,17 +1,22 @@
 #!/bin/bash
 
+lifeA=0
+lifeMax=3
+countres=5
+countadv=12
 
 hunt()
 {
 	xmacroplay -d 60 < hunt
+	((lifeA=lifeA+1))
+	((countres=countres+1))
 	onemin
 }
 
-hunt-heal()
+heal()
 {
-	xmacroplay -d 60 < hunt
 	xmacroplay -d 60 < heal
-	onemin
+	((lifeA=0))
 }
 
 pickup()
@@ -32,35 +37,34 @@ onemin()
 	done
 }
 
-5min1()
+main()
 {
-	pickup
-	hunt
-	hunt-heal
-	hunt
-	hunt-heal
-	hunt
-}
+	true=1
+	while [ $true != "0" ];
+	do
+		if [ "$countadv" -eq 12 ];
+		then
+			heal
+			adv
+			heal
+			((countadv=0))
+		fi
 
-5min2()
-{
-	pickup
-	hunt-heal
-	hunt
-	hunt-heal
-	hunt
-	hunt-heal
-}
+		if [ "$countres" -eq 5 ];
+		then
+			pickup
+			((countadv=countadv+1))
+			((countres=0))
+		fi
 
-1hour()
-{
-	adv
-	for i in {1..6}; do
-		5min1
-		5min2
+		if [ "$lifeA" -eq "$lifeMax" ];
+		then
+			heal
+			
+		fi
+
+		hunt
 	done
 }
 
-for i in {1..10}; do
-	1hour
-done
+main
