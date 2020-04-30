@@ -1,0 +1,19 @@
+MotionNotify 1411 1031
+ButtonPress 1
+ButtonRelease 1
+KeyStrPress r
+KeyStrRelease r
+KeyStrPress p
+KeyStrRelease p
+KeyStrPress g
+KeyStrRelease g
+KeyStrPress space
+KeyStrRelease space
+KeyStrPress a
+KeyStrRelease a
+KeyStrPress d
+KeyStrRelease d
+KeyStrPress v
+KeyStrRelease v
+KeyStrPress Return
+KeyStrRelease Return

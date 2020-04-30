@@ -9,13 +9,19 @@ hunt()
 
 hunt-heal()
 {
-	xmacroplay -d 60 < hunt_heal
+	xmacroplay -d 60 < hunt
+	xmacroplay -d 60 < heal
 	onemin
 }
 
 pickup()
 {
 	xmacroplay -d 60 < pickup
+}
+
+adv()
+{
+	xmacroplay -d 60 < adv
 }
 
 onemin()
@@ -48,9 +54,13 @@ onemin()
 
 1hour()
 {
-	for i in {1..70}; do
+	adv
+	for i in {1..6}; do
 		5min1
 		5min2
 	done
 }
 
+for i in {1..10}; do
+	1hour
+done
