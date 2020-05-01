@@ -4,7 +4,7 @@
 #1411 1031
 
 lifeA=0
-lifeMax=20
+lifeMax=2
 countres=300
 countadv=3600
 rdm1=0
