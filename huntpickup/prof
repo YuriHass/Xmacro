@@ -9,11 +9,7 @@ KeyStrPress g
 KeyStrRelease g
 KeyStrPress space
 KeyStrRelease space
-KeyStrPress a
-KeyStrRelease a
-KeyStrPress d
-KeyStrRelease d
-KeyStrPress v
-KeyStrRelease v
+KeyStrPress p
+KeyStrRelease p
 KeyStrPress Return
 KeyStrRelease Return
